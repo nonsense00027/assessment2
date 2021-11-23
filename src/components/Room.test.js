@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Room from "./Room";
 
-test("on initial render, the select option is disabled", () => {
+test("check if both select elements exist", () => {
   render(<Room data={{ adults: 1, children: 0 }} handleChange={() => {}} />);
   expect(screen.getByRole("combobox", { name: /adults/i })).toBeInTheDocument();
   expect(
